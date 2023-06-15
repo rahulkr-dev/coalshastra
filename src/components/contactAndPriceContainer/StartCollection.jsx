@@ -7,7 +7,7 @@ const StartCollection = ({rating}) => {
     <Flex alignItems={"center"} gap="3px">
         {
             arr.map((item,_i)=>(
-                <AiFillStar color="yellow" />
+                <AiFillStar key={_i} color="yellow" />
             ))
         }
         <Text>{rating}</Text>
