@@ -3,7 +3,7 @@ import React from "react";
 
 const NavbarLeft = () => {
   return (
-    <Flex alignItems={"center"} gap="1rem" w="60%" fontSize={".9rem"}>
+    <Flex alignItems={"center"} gap="2rem" w="60%" fontSize={".9rem"}>
       <Image
         ml="5rem"
         w="140px"
