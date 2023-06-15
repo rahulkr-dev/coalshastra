@@ -69,7 +69,8 @@ const PriceDetails = () => {
           views={"31886"}
           mt="1000 MT"
           price="INR 12505.00/MT"
-          liftingDay={"30"}
+          advance={"40% Advance"}
+          liftingDay={"15 Lifting Days"}
           creditDay={"0"}
           rating={"5"}
           bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
@@ -78,7 +79,8 @@ const PriceDetails = () => {
           views={"31886"}
           mt="1000 MT"
           price="INR 12505.00/MT"
-          liftingDay={"30"}
+          // advance={"30% Advance"}
+          liftingDay={"18 Lifting Days"}
           creditDay={"0"}
           rating={"5"}
           bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
@@ -87,8 +89,9 @@ const PriceDetails = () => {
           views={"31886"}
           mt="1000 MT"
           price="INR 12505.00/MT"
-          liftingDay={"30"}
-          creditDay={"0"}
+          advance={"100% Advance"}
+          liftingDay={"15 Lifting Days"}
+          // creditDay={"0"}
           rating={"5"}
           bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
         />

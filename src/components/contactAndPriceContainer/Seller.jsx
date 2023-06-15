@@ -7,28 +7,28 @@ import StartCollection from "./StartCollection";
 
 const Seller = ({ views, liftingDay, advance, rating, bottomInfo,mt,price }) => {
   return (
-    <Box>
-      <Text>
-        #{views} {`| (Views) `}
+    <Box borderWidth={"1px"} boxShadow={"md"} p="1rem">
+      <Text fontWeight={"500"}>
+        #{views} <Text pl="5px" color="blue"  fontSize={".7rem"} fontWeight={"bold"} as="span">{`(Views)`}</Text>
       </Text>
-      <Flex>
-        <Text fontWeight={"bold"} color="red">
-          {price}
+      <Flex justifyContent={"space-between"}>
+        <Text textDecoration={"underline"} fontWeight={"bold"} color="red">
+          {price} 
         </Text>
-        <Flex>
-          <FaMoneyCheck color="gray" />
-          <Text>{mt}</Text>
+        <Flex alignItems={"center"} gap="5px">
+          <FaMoneyCheck color="gray" />|
+          <Text fontWeight={"bold"}> {mt}</Text>
         </Flex>
       </Flex>
       <Flex justifyContent={"space-between"} alignItems={"center"}>
         <Text>{advance}</Text>
         <Text>{liftingDay}</Text>
       </Flex>
-      <Flex>
+      <Flex alignItems={"center"} gap="10px">
         <FiGift color="gray" />
         <Text>MV SAMJOHN SOLIDARITY</Text>
       </Flex>
-      <Flex>
+      <Flex alignItems={"center"}>
         <AiFillExperiment />
         <Text>Seller Info</Text>
       </Flex>
