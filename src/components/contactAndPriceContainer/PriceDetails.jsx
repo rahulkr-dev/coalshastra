@@ -1,12 +1,16 @@
 import React from "react";
 import { RiRedPacketLine } from "react-icons/ri";
 import { HiDownload } from "react-icons/hi";
-import { Box, Text, Flex, Image, Center } from "@chakra-ui/react";
+import { HiLocationMarker } from "react-icons/hi";
+
+import { Box, Text, Flex, Image, Center, Grid } from "@chakra-ui/react";
+import Buyer from "./Buyer";
+import Seller from "./Seller";
 let usaImg =
   "https://cdn.pixabay.com/photo/2017/03/14/21/00/american-flag-2144392_640.png";
 const PriceDetails = () => {
   return (
-    <Box p="10px" borderWidth={"1px"}>
+    <Flex flexDir={"column"} gap="12px" p="10px" borderWidth={"1px"}>
       <Center p="5px" bg="blue.100">
         All Prices are Including CESS
       </Center>
@@ -21,15 +25,15 @@ const PriceDetails = () => {
             Last Match
           </Text>
         </Flex>
-        <Flex gap="1rem">
+        <Flex gap="1rem" alignItems={"center"} justifyContent={"space-between"}>
           <Box>
             <Flex gap="5px">
               <Image boxSize={"1rem"} src={usaImg} alt="Usa image" />
-              <Text>United States</Text>
+              <Text>United States |</Text>
             </Flex>
             <Flex gap="5px">
-              <RiRedPacketLine size="1rem" color="gray" />
-              <Text>United States</Text>
+              <HiLocationMarker size="1rem" color="gray" />
+              <Text>Tuna Port Port |</Text>
             </Flex>
             <Text>6968 NAR {`NAR(Kcal/kg)`}</Text>
           </Box>
@@ -45,9 +49,58 @@ const PriceDetails = () => {
       </Flex>
 
       {/* All Listing Items */}
-      <Text fontWeight="bold" fontSize="1.2rem" mt="10px">All Listing</Text>
+      <Text fontWeight="bold" fontSize="1.2rem" mt="10px">
+        All Listing
+      </Text>
 
-    </Box>
+      {/* Listing Card of buyer and seller */}
+
+      <Grid gap="5px" templateColumns={"repeat(2,1fr)"}>
+        <Buyer
+          views={"31886"}
+          mt="1000 MT"
+          price="INR 12505.00/MT"
+          liftingDay={"30"}
+          creditDay={"0"}
+          rating={"5"}
+          bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
+        />
+        <Seller
+          views={"31886"}
+          mt="1000 MT"
+          price="INR 12505.00/MT"
+          liftingDay={"30"}
+          creditDay={"0"}
+          rating={"5"}
+          bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
+        />
+        <Buyer
+          views={"31886"}
+          mt="1000 MT"
+          price="INR 12505.00/MT"
+          liftingDay={"30"}
+          creditDay={"0"}
+          rating={"5"}
+          bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
+        />
+        <Seller
+          views={"31886"}
+          mt="1000 MT"
+          price="INR 12505.00/MT"
+          liftingDay={"30"}
+          creditDay={"0"}
+          rating={"5"}
+          bottomInfo={"50K+ Tons | 100+ Deals | <1 Yr"}
+        />
+      </Grid>
+      {/* Total Quantity */}
+      <Flex>
+        <Text>2000</Text>
+        <Text>Total Quantity</Text>
+        <Text>1400</Text>
+      </Flex>
+      <Text textAlign={"center"} color="blue">No More Listings</Text>
+    </Flex>
   );
 };
 
